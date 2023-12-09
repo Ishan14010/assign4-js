@@ -1,5 +1,8 @@
 const apiUrl = 'https://jsonplaceholder.typicode.com';
 
+// Use your GitHub personal access token (replace 'GITHUB_TOKEN' with your actual token)
+const githubAccessToken = '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';
+
 async function fetchPosts() {
     try {
         const response = await fetch(`${apiUrl}/posts`);
@@ -20,12 +23,20 @@ function listPosts(postContainerElementId) {
         return;
     }
 
+    // Fetch posts and update the container
     fetchPosts()
         .then((posts) => {
             if (!posts) {
                 postContainerElement.innerHTML = 'No posts fetched.';
                 return;
             }
+            
+            // Add student information before posts
+            const studentInfo = document.createElement('p');
+            studentInfo.textContent = 'Student ID: 200518162, Name: Ishan Sharma';
+            postContainerElement.parentNode.insertBefore(studentInfo, postContainerElement);
+
+            // Add each post to the container
             for (const post of posts) {
                 postContainerElement.appendChild(postElement(post));
             }
@@ -49,3 +60,5 @@ function postElement(post) {
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+// No need to call listPosts here

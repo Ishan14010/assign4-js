@@ -1,0 +1,29 @@
+/* Reset default margin for the entire document */
+body {
+    margin: 0;
+}
+
+/* Styling for the post section */
+#post-section {
+    background-color: rgb(16, 15, 15);
+    color: #bcbcbc;
+    padding: 24px;
+}
+
+/* Styling for h3 elements (post titles) */
+h3 {
+    font-size: 24px;
+}
+
+/* Styling for h3 elements within the post items container */
+#post-items-container h3 {
+    margin: 6px;
+    padding: 6px;
+}
+
+/* Styling for anchor elements (links) */
+a {
+    text-decoration: none;
+    padding: 6px; 
+    color: #0492cee2; /* Consider using a variable for color */
+}

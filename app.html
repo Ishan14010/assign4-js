@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="app.css"/>
+    <!-- Link to the external CSS file in the css folder -->
+    <link rel="stylesheet" href="css/app.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <!-- Container for displaying posts -->
     <div id="post-section">
         <h2>LATEST POSTS</h2>
+        <!-- Container for individual post items -->
         <div id="post-items-container"></div> 
     </div>
-    <script src="post.js" defer></script>
+    <!-- Include the external JavaScript file in the js folder with the 'defer' attribute -->
+    <script src="js/post.js" defer></script>
     <script>
         // Dynamically add student ID and name
         const studentInfo = document.createElement('p');
-        studentInfo.textContent = 'Student ID: YOUR_STUDENT_ID, Name: YOUR_NAME';
+        //  placeholders with actual student ID and name
+        studentInfo.textContent = 'Student ID: 200518162, Name: Ishan Sharma';
         document.body.appendChild(studentInfo);
 
-        listPosts('post-items-container');
+       
     </script>
 </body>
 </html>
