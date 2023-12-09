@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="app.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="post-section">
+        <h2>LATEST POSTS</h2>
+        <div id="post-items-container"></div> 
+    </div>
+    <script src="post.js" defer></script>
+    <script>
+        // Dynamically add student ID and name
+        const studentInfo = document.createElement('p');
+        studentInfo.textContent = 'Student ID: YOUR_STUDENT_ID, Name: YOUR_NAME';
+        document.body.appendChild(studentInfo);
+
+        listPosts('post-items-container');
+    </script>
+</body>
+</html>
